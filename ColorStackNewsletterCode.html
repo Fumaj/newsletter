@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    /* Custom Font Integration */
+    @font-face {
+      font-family: 'NibPro';
+      src: url('https://fumaj.github.io/fonts/NibPro-Regular.woff2') format('woff2'),
+           url('https://fumaj.github.io/fonts/NibPro-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'NibPro';
+      src: url('https://fumaj.github.io/fonts/NibPro-Bold.woff2') format('woff2'),
+           url('https://fumaj.github.io/fonts/NibPro-Bold.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+    }
+
+    /* Base Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    .news-banner {
+      background-color: #d0d8f0;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    .scrolling-text {
+      display: inline-block;
+      animation: scrollNews 10s linear infinite;
+    }
+
+    .scrolling-text span {
+      display: inline-block;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #333;
+      text-transform: uppercase;
+      margin-right: 20px;
+    }
+
+    /* Animation for seamless scrolling */
+    @keyframes scrollNews {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+
+    .container {
+      max-width: 90%; /* Adjusts to screen size */
+      margin: 20px auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .section {
+      margin: 50px 0;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .section:nth-child(even) {
+      background-color: #e8f1f0;
+      border-radius: 8px;
+    }
+
+    h1 {
+      font-size: 1.8rem; /* Responsive font size */
+      color: #004d40;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #666666;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    /* Apply custom font only to the specific <p> tag */
+    .custom-font-paragraph {
+      font-family: 'NibPro', sans-serif;
+    }
+
+    .cta-button {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #004d40;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 1rem;
+      text-transform: uppercase;
+      margin-top: 10px;
+    }
+
+    /* Responsive Adjustments */
+    @media screen and (max-width: 768px) {
+      .scrolling-text span {
+        font-size: 1.2rem; /* Smaller font size on mobile */
+        margin-right: 15px;
+      }
+
+      .container {
+        padding: 15px;
+      }
+
+      h1 {
+        font-size: 1.5rem; /* Smaller heading size on mobile */
+      }
+
+      p {
+        font-size: 0.9rem; /* Smaller paragraph size */
+      }
+
+      .cta-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .scrolling-text span {
+        font-size: 1rem; /* Even smaller font size for very small screens */
+      }
+
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+
+      .cta-button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Rotating News Banner -->
+  <div class="news-banner">
+    <div class="scrolling-text">
+      <span>NEWS</span><span>NEWS</span><span>NEWS</span><span>NEWS</span>
+      <span>NEWS</span><span>NEWS</span><span>NEWS</span><span>NEWS</span>
+    </div>
+  </div>
+
+  <!-- Content Container -->
+  <div class="container">
+    <!-- Section 1 -->
+    <div class="section">
+      <h1>❄️ Winter Quarter, Week 3 | Newsletter #2</h1>
+      <p class="custom-font-paragraph">
+        We hope you enjoyed the three-day break. Diving into Week 3 of the Winter Quarter, we’re excited to bring you the latest updates, events, and highlights from our community. Let’s make this a productive and meaningful week&nbsp;together!
+      </p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+      <h1>Announcements 🚨</h1>
+      <p>
+        Explore stories and ideas that spark creativity and innovation.
+      </p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+      <h1>Stay Ahead</h1>
+      <p>
+        Get access to exclusive resources, tools, and strategies to stay ahead of the curve.
+      </p>
+      <a href="#" class="cta-button">Learn More</a>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+      <h1>Join Us</h1>
+      <p>
+        Become part of our community and start building your future today.
+      </p>
+      <a href="#" class="cta-button">Get Started</a>
+    </div>
+  </div>
+</body>
+</html>
